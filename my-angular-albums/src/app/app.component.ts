@@ -8,4 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
     title = 'my-angular-albums';
+    lastClickedId = '';
+    lastClickedAlbum = '';
+
+    parentFunctionHandler(inputs)  {
+        this.lastClickedId = inputs[0];
+        this.lastClickedAlbum = inputs[1];
+    }
 }
