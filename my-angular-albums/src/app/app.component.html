@@ -1,12 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1 class="jumbotron my-5 mx-5">Welcome to {{ title | reverseStr }}! </h1>
-</div>
-<div style="text-align:center">
-  Last clicked ID: {{ lastClickedId }} and Last clicked Album: {{ lastClickedAlbum }}
-</div>
-<app-album-list
-  (albumClicked)="parentFunctionHandler($event)">
-</app-album-list>
+<app-navbar></app-navbar>
 
 <router-outlet></router-outlet>
