@@ -13,19 +13,11 @@ import { tap } from 'rxjs/operators';
 })
 export class WeatherService {
   url = 'api.openweathermap.org/data/2.5/find?q=Philadelphia&units=imperial';
-  city: string;
-  temperature: number;
-  blahdata: any;
+  apiKey = '78bd47325f1fc25efba0ebb2f80717ba';
 
   constructor(private http: HttpClient) { }
 
   getWeather()  {
-    const data = this.http.get(this.url).
-      pipe(
-        tap(a => this.blahdata = ${a} )
-      );
-    // const data = new JsonPipe().transform(this.http.get(this.url));
-    console.log(data);
-    return data;
+    return (this.http.get(this.url));
   }
 }
